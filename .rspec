@@ -1,0 +1,7 @@
+--color
+--profile
+--order random
+--format documentation
+<% if ENV['CIRCLE_TEST_REPORTS'] %>
+  --format RspecJunitFormatter --out <%= ENV['CIRCLE_TEST_REPORTS'] %>/rspec/junit.xml
+<% end %>
